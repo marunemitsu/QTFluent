@@ -8,4 +8,4 @@ A Windows11 and Office style fluent QT GUI Template. QT fluent implements three 
 ![About](https://user-images.githubusercontent.com/33621926/145712549-3e95fa11-c7da-451a-ba2d-720a88317a28.png)
 
 ## Acknowledgment
-The Icons are downloaded from www.iconfont.com.
+The Icons are downloaded from https://www.iconfont.cn/.
