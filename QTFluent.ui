@@ -1,0 +1,3424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainClass</class>
+ <widget class="QMainWindow" name="MainClass">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1201</width>
+    <height>732</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>QT Fluent: A windows11-like fluent style QT GUI template.</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icon.png</normaloff>Icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame{
+	font-family: &quot;Calibri&quot;;
+}
+/**********页签项**********/
+/*页签项默认状态*/
+QTabBar::tab {
+		font-family: &quot;Calibri&quot;;
+		height: 25px;
+        color: rgb(79, 79, 79);
+        background: transparent;
+		font: 14px;
+		margin-right: 10px;
+		margin-left: 10px;
+}
+QTabBar::tab:hover {
+		font: 15px;
+        border-bottom: 2px solid rgb(155, 155, 155);
+        color: black;
+		height: 25px;
+		margin-right: 10px;
+		margin-left: 10px;
+}
+QTabBar::tab:selected {
+		font: 15px solid;
+		color: black;
+		border-bottom: 2px solid rgb(45, 105, 65);
+}
+QTabWidget#tabWidget::pane {
+		border: 1px solid rgb(220, 220, 220);
+        background: rgb(250, 250, 250);
+        margin-top: 12px;
+		color: black;
+		border-radius: 10px;
+}
+
+/**********按钮**********/
+QPushButton{
+        border-radius: 8px;
+        border: none;
+        height: 30px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+}
+QPushButton:enabled {
+		background-color: rgb(0, 126, 57);
+        color: white;
+}
+QPushButton:!enabled {
+        background-color: rgb(0, 56, 0);
+        color: rgb(200, 200, 200);
+}
+QPushButton:enabled:hover{
+        background: rgb(0, 106, 37);
+}
+QPushButton:enabled:pressed{
+        background: rgb(234, 178, 70);
+		font: bold;
+}
+
+QPushButton[Gray = &quot;true&quot;] {
+		border-radius: 8px;
+		border: 1px solid rgb(200, 200, 200);
+        color: black;
+}
+QPushButton[Gray = &quot;true&quot;]:enabled {
+		background: rgb(235, 235, 235);
+        color: black;
+}
+QPushButton[Gray = &quot;true&quot;]:!enabled {
+        background-color: rgb(92, 92, 92);
+        color: rgb(200, 200, 200);
+}
+QPushButton[Gray = &quot;true&quot;]:enabled:hover {
+        background: rgb(220, 220, 220);
+}
+QPushButton[Gray = &quot;true&quot;]:enabled:pressed {
+        background: rgb(210, 210, 210);
+		font: bold;
+}
+
+QPushButton[Orange = &quot;true&quot;] {
+		border-radius: 8px;
+        color: white;
+}
+QPushButton[Orange = &quot;true&quot;]:enabled {
+		background: rgb(204, 88, 21);
+}
+QPushButton[Orange = &quot;true&quot;]:!enabled {
+        background-color: rgb(78, 34, 9);
+        color: rgb(200, 200, 200);
+}
+QPushButton[Orange = &quot;true&quot;]:enabled:hover {
+        background: rgb(165, 72, 18);
+}
+QPushButton[Orange = &quot;true&quot;]:enabled:pressed {
+        background: rgb(234, 178, 70);
+		font: bold;
+}
+QPushButton[Blue = &quot;true&quot;] {
+		border-radius: 8px;
+        color: white;
+}
+QPushButton[Blue = &quot;true&quot;]:enabled {
+		background: rgb(31, 91, 182);
+}
+QPushButton[Blue = &quot;true&quot;]:!enabled {
+        background-color: rgb(0, 31, 82);
+        color: rgb(200, 200, 200);
+}
+QPushButton[Blue = &quot;true&quot;]:enabled:hover {
+        background: rgb(21, 81, 172);
+}
+QPushButton[Blue = &quot;true&quot;]:enabled:pressed {
+        background: rgb(234, 178, 70);
+		font: bold;
+}
+
+/**********复选框**********/
+QCheckBox{
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+}
+QCheckBox:enabled:checked{
+        color: rgb(0, 106, 37);
+}
+QCheckBox:enabled:!checked{
+        color: rgb(70, 71, 73);
+}
+QCheckBox:enabled:hover{
+        color: rgb(0, 136, 67);
+}
+QCheckBox:!enabled{
+        color: rgb(150, 150, 150);
+}
+QCheckBox::indicator:!checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_unchecked.png);
+}
+QCheckBox::indicator:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked.png);
+}
+QCheckBox::indicator:!enabled:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked_unenabled.png);
+}
+QCheckBox[Orange = &quot;true&quot;]:enabled:checked{
+        color: rgb(112, 45, 6);
+}
+QCheckBox[Orange = &quot;true&quot;]:enabled:!checked{
+        color: rgb(70, 71, 73);
+}
+QCheckBox[Orange = &quot;true&quot;]:enabled:hover{
+        color: rgb(132, 65, 26);
+}
+QCheckBox[Orange = &quot;true&quot;]:!enabled{
+        color: rgb(150, 150, 150);
+}
+QCheckBox[Orange = &quot;true&quot;]::indicator:!checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_unchecked.png);
+}
+QCheckBox[Orange = &quot;true&quot;]::indicator:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked_orange.png);
+}
+QCheckBox[Orange = &quot;true&quot;]::indicator:!enabled:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked_unenabled.png);
+}
+QCheckBox[Blue = &quot;true&quot;]:enabled:checked{
+        color: rgb(21, 61, 152);
+}
+QCheckBox[Blue = &quot;true&quot;]:enabled:!checked{
+        color: rgb(70, 71, 73);
+}
+QCheckBox[Blue = &quot;true&quot;]:enabled:hover{
+        color: rgb(21, 61, 152);
+}
+QCheckBox[Blue = &quot;true&quot;]:!enabled{
+        color: rgb(150, 150, 150);
+}
+QCheckBox[Blue = &quot;true&quot;]::indicator:!checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_unchecked.png);
+}
+QCheckBox[Blue = &quot;true&quot;]::indicator:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked_blue.png);
+}
+QCheckBox[Blue = &quot;true&quot;]::indicator:!enabled:checked{
+        height: 30px;
+		width: 30px;
+		image: url(./Textures/checkbox_checked_unenabled.png);
+}
+/**********单选框**********/
+QRadioButton{
+        font-family: &quot;Calibri&quot;;
+		font: 12px;
+}
+QRadioButton:enabled:checked{
+         color: rgb(0, 106, 37);
+}
+QRadioButton:enabled:!checked{
+         color: rgb(70, 71, 73);
+}
+QRadioButton:enabled:hover{
+        color: rgb(0, 136, 67);
+}
+QRadioButton:!enabled{
+        color: rgb(150, 150, 150);
+}
+QRadioButton::indicator:checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked.png);
+}
+QRadioButton::indicator:!checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_unchecked.png);
+}
+QRadioButton::indicator:!enabled:checked{
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked_unable.png);
+}
+QRadioButton[Orange = &quot;true&quot;]:enabled:checked{
+         color: rgb(112, 45, 6);
+}
+QRadioButton[Orange = &quot;true&quot;]:enabled:!checked{
+         color: rgb(70, 71, 73);
+}
+QRadioButton[Orange = &quot;true&quot;]:enabled:hover{
+        color: rgb(132, 65, 26);
+}
+QRadioButton[Orange = &quot;true&quot;]:!enabled{
+        color: rgb(150, 150, 150);
+}
+QRadioButton[Orange = &quot;true&quot;]::indicator:checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked_orange.png);
+}
+QRadioButton[Orange = &quot;true&quot;]::indicator:!checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_unchecked.png);
+}
+QRadioButton[Orange = &quot;true&quot;]::indicator:!enabled:checked{
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked_unable.png);
+}
+QRadioButton[Blue = &quot;true&quot;]:enabled:checked{
+         color: rgb(21, 61, 152);
+}
+QRadioButton[Blue = &quot;true&quot;]:enabled:!checked{
+         color: rgb(70, 71, 73);
+}
+QRadioButton[Blue = &quot;true&quot;]:enabled:hover{
+        color: rgb(21, 61, 152);
+}
+QRadioButton[Blue = &quot;true&quot;]:!enabled{
+        color: rgb(150, 150, 150);
+}
+QRadioButton[Blue = &quot;true&quot;]::indicator:checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked_blue.png);
+}
+QRadioButton[Blue = &quot;true&quot;]::indicator:!checked {
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_unchecked.png);
+}
+QRadioButton[Blue = &quot;true&quot;]::indicator:!enabled:checked{
+        width: 20px;
+        height: 20px;
+		image: url(./Textures/radio_checked_unable.png);
+}
+
+/**********输入框**********/
+QLineEdit {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(0, 136, 67);
+        background: white;
+}
+QLineEdit:enabled {
+        color: rgb(49, 49, 49);
+}
+QLineEdit:enabled:hover, QLineEdit:enabled:focus {
+        color: rgb(0, 56, 0);
+}
+QLineEdit:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QLineEdit[Orange = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(224, 108, 41);
+        background: white;
+}
+QLineEdit[Orange = &quot;true&quot;]:enabled {
+        color: rgb(49, 49, 49);
+}
+QLineEdit[Orange = &quot;true&quot;]:enabled:hover, QLineEdit:enabled:focus {
+        color: rgb(132, 65, 26);
+}
+QLineEdit[Orange = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QLineEdit[Blue = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(31, 91, 182);
+        background: white;
+}
+QLineEdit[Blue = &quot;true&quot;]:enabled {
+        color: rgb(49, 49, 49);
+}
+QLineEdit[Blue = &quot;true&quot;]:enabled:hover, QLineEdit:enabled:focus {
+        color: rgb(21, 61, 152);
+}
+QLineEdit[Blue = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+
+
+QTextEdit {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(0, 136, 67);
+        background: white;
+}
+QTextEdit:enabled {
+        color: rgb(49, 49, 49);
+}
+QTextEdit:enabled:hover, QTextEdit:enabled:focus {
+        color: rgb(0, 56, 0);
+}
+QTextEdit:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QTextEdit[Orange = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(224, 108, 41);
+        background: white;
+}
+QTextEdit[Orange = &quot;true&quot;]:enabled {
+        color: rgb(49, 49, 49);
+}
+QTextEdit[Orange = &quot;true&quot;]:enabled:hover, QTextEdit:enabled:focus {
+        color: rgb(132, 65, 26);
+}
+QTextEdit[Orange = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QTextEdit[Blue = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border-radius: 5px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(31, 91, 182);
+        background: white;
+}
+QTextEdit[Blue = &quot;true&quot;]:enabled {
+        color: rgb(49, 49, 49);
+}
+QTextEdit[Blue = &quot;true&quot;]:enabled:hover, QTextEdit:enabled:focus {
+        color: rgb(21, 61, 152);
+}
+QTextEdit[Blue = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+
+/**********微调器**********/
+QSpinBox {
+        border-radius: 5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(0, 136, 67);
+        background: white;
+}
+QSpinBox:enabled {
+        color: rgb(60, 60, 60);
+}
+QSpinBox:enabled:hover, QSpinBox:enabled:focus {
+        color: rgb(0, 56, 0);
+}
+QSpinBox:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QSpinBox::up-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/UpArrow.png);
+}
+QSpinBox::up-button:!enabled {
+        background: transparent;
+		image: url(./Textures/UpArrow_Disable.png);
+}
+QSpinBox::down-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/DownArrow.png);
+}
+QSpinBox::down-button:!enabled {
+        background: transparent;
+		image: url(./Textures/DownArrow_Disable.png);
+}
+QSpinBox[Orange = &quot;true&quot;] {
+        border-radius: 5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(224, 108, 41);
+        background: white;
+}
+QSpinBox[Orange = &quot;true&quot;]:enabled {
+        color: rgb(60, 60, 60);
+}
+QSpinBox[Orange = &quot;true&quot;]:enabled:hover, QSpinBox:enabled:focus {
+        color: rgb(132, 65, 26);
+}
+QSpinBox[Orange = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QSpinBox[Orange = &quot;true&quot;]::up-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/UpArrow_orange.png);
+}
+QSpinBox[Orange = &quot;true&quot;]::up-button:!enabled {
+        background: transparent;
+		image: url(./Textures/UpArrow_Disable.png);
+}
+QSpinBox[Orange = &quot;true&quot;]::down-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/DownArrow_orange.png);
+}
+QSpinBox[Orange = &quot;true&quot;]::down-button:!enabled {
+        background: transparent;
+		image: url(./Textures/DownArrow_Disable.png);
+}
+QSpinBox[Blue = &quot;true&quot;] {
+        border-radius: 5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(31, 91, 182);
+        background: white;
+}
+QSpinBox[Blue = &quot;true&quot;]:enabled {
+        color: rgb(60, 60, 60);
+}
+QSpinBox[Blue = &quot;true&quot;]:enabled:hover, QSpinBox:enabled:focus {
+        color: rgb(21, 61, 152);
+}
+QSpinBox[Blue = &quot;true&quot;]:!enabled {
+        color: rgb(80, 80, 80);
+		border-bottom: 2px solid rgb(192, 192, 192);
+		background: rgb(235, 235, 235);
+}
+QSpinBox[Blue = &quot;true&quot;]::up-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/UpArrow_blue.png);
+}
+QSpinBox[Blue = &quot;true&quot;]::up-button:!enabled {
+        background: transparent;
+		image: url(./Textures/UpArrow_Disable.png);
+}
+QSpinBox[Blue = &quot;true&quot;]::down-button {
+        width: 18px;
+        height: 10px;
+        image: url(./Textures/DownArrow_blue.png);
+}
+QSpinBox[Blue = &quot;true&quot;]::down-button:!enabled {
+        background: transparent;
+		image: url(./Textures/DownArrow_Disable.png);
+}
+
+/**********进度条**********/
+QProgressBar{
+        text-align: center;
+        color: black;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(250, 250, 250);
+}
+QProgressBar::chunk {
+		border-radius: 10px;
+        background: rgb(30, 166, 97);
+}
+QProgressBar:!enabled{
+        border: none;
+        text-align: center;
+        color: white;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(170, 170, 170);
+}
+QProgressBar::chunk:!enabled {
+		border-radius: 10px;
+        background: rgb(94, 94, 94);
+}
+QProgressBar[Orange = &quot;true&quot;]{
+        text-align: center;
+        color: black;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(250, 250, 250);
+}
+QProgressBar[Orange = &quot;true&quot;]::chunk {
+		border-radius: 10px;
+        background: rgb(230, 108, 38);
+}
+QProgressBar[Orange = &quot;true&quot;]:!enabled{
+        border: none;
+        text-align: center;
+        color: white;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(170, 170, 170);
+}
+QProgressBar[Orange = &quot;true&quot;]::chunk:!enabled {
+		border-radius: 10px;
+        background: rgb(94, 94, 94);
+}
+QProgressBar[Blue = &quot;true&quot;]{
+        text-align: center;
+        color: black;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(250, 250, 250);
+}
+QProgressBar[Blue = &quot;true&quot;]::chunk {
+		border-radius: 10px;
+        background: rgb(71, 131, 222);
+}
+QProgressBar[Blue = &quot;true&quot;]:!enabled{
+        border: none;
+        text-align: center;
+        color: white;
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        background: rgb(170, 170, 170);
+}
+QProgressBar[Blue = &quot;true&quot;]::chunk:!enabled {
+		border-radius: 10px;
+        background: rgb(94, 94, 94);
+}
+/***********拖动条***********/
+QSlider::groove:horizontal{ 
+          height: 10px;  
+          border:1px solid rgb(220, 220, 220);
+          border-radius:5px;    
+          background: rgb(220, 220, 220);
+		  margin-right: 10px;
+		  margin-left: 10px;
+} 
+QSlider::handle:horizontal{ 
+		image:url(./Textures/SliderHandler.png);
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		
+} 
+QSlider::handle:horizontal:hover{ 
+		height: 22px;
+		width: 22px;
+		
+} 
+QSlider[Orange = &quot;true&quot;]::handle:horizontal:hover{ 
+		height: 22px;
+		width: 22px;
+		
+} 
+QSlider[Orange = &quot;true&quot;]::sub-page:horizontal{
+		border: 1px solid rgb(220, 220, 220);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(230, 108, 38);
+
+}
+QSlider[Orange = &quot;true&quot;]::handle:horizontal{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		image:url(./Textures/SliderHandler_orange.png);
+} 
+QSlider[Blue = &quot;true&quot;]::handle:horizontal:hover{ 
+		height: 22px;
+		width: 22px;
+		
+} 
+QSlider[Blue = &quot;true&quot;]::sub-page:horizontal{
+		border: 1px solid rgb(220, 220, 220);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(71, 131, 222);
+
+}
+QSlider[Blue = &quot;true&quot;]::handle:horizontal{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		image:url(./Textures/SliderHandler_blue.png);
+} 
+QSlider::sub-page:horizontal{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		margin-left: 10px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(50, 186, 117);
+
+}
+ QSlider::groove:horizontal:!enabled{ 
+          height: 10px;  
+          border:1px solid rgb(220, 220, 220);
+          border-radius:5px; 
+          background: rgb(220, 220, 220);
+} 
+QSlider::handle:horizontal:!enabled{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		image:url(./Textures/SliderHandler_Grey.png);
+} 
+QSlider::sub-page:horizontal:!enabled{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(94, 94, 94);
+
+}
+QSlider::groove:vertical{ 
+          width: 10px;  
+          border:1px solid rgb(220, 220, 220);
+          border-radius:5px;
+          background: rgb(220, 220, 220);
+		  margin-top: 10px;
+		  margin-bottom: 10px;
+} 
+QSlider::handle:vertical{ 	
+		margin: -10px;
+		height: 20px;
+		width: 20px;	
+		image:url(./Textures/SliderHandler.png);
+} 
+QSlider::handle:vertical:hover{ 	
+		height: 22px;
+		width: 22px;	
+} 
+QSlider[Orange = &quot;true&quot;]::handle:vertical:hover{ 	
+		height: 22px;
+		width: 22px;	
+} 
+QSlider[Blue = &quot;true&quot;]::handle:vertical:hover{ 	
+		height: 22px;
+		width: 22px;	
+} 
+QSlider::sub-page:vertical{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(50, 186, 117);
+		margin-top: 10px;
+
+}
+QSlider[Orange = &quot;true&quot;]::handle:vertical{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		image:url(./Textures/SliderHandler_orange.png);
+} 
+QSlider[Orange = &quot;true&quot;]::sub-page:vertical{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(230, 108, 38);
+
+}
+QSlider[Blue = &quot;true&quot;]::handle:vertical{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;
+		image:url(./Textures/SliderHandler_blue.png);
+} 
+QSlider[Blue = &quot;true&quot;]::sub-page:vertical{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(71, 131, 222);
+
+}
+ QSlider::groove:vertical:!enabled{ 
+          width: 10px;  
+          border:1px solid rgb(220, 220, 220);
+          border-radius:5px;
+          background: rgb(220, 220, 220);
+} 
+QSlider::handle:vertical:!enabled{ 
+		margin: -10px;
+		height: 20px;
+		width: 20px;	
+		image:url(./Textures/SliderHandler_Grey.png);
+} 
+QSlider::sub-page:vertical:!enabled{
+		border: 1px solid rgb(200, 200, 200);
+ 		border-radius:5px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        background: rgb(94, 94, 94);
+
+}
+
+/**********分组框**********/
+QGroupBox {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 10px;
+		background: white;
+}
+QGroupBox::title {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        color: black;
+        top: 5px;
+		left: 15px;
+}
+
+/**********下拉列表**********/
+QComboBox {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(0, 136, 67);
+        background: white;
+}
+QComboBox[Orange = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(230, 108, 38);
+        background: white;
+}
+QComboBox[Blue = &quot;true&quot;] {
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(31, 91, 182);
+        background: white;
+}
+QComboBox:enabled {
+        color: rgb(49, 49, 49);
+}
+QComboBox:!enabled {
+        color: rgb(80, 80, 80);
+}
+QComboBox:enabled:hover, QComboBox:enabled:focus {
+        color: rgb(30, 166, 97);
+}
+QComboBox[Orange = &quot;true&quot;]:enabled:hover, QComboBox:enabled:focus {
+        color: rgb(132, 65, 26);
+}
+QComboBox::drop-down {
+        width: 20px;
+        border: none;
+        background: transparent;
+}
+QComboBox::drop-down:hover {
+        background: rgba(255, 255, 255, 30);
+}
+
+QComboBox::down-arrow {
+		width: 10px;
+		image: url(./Textures/DownArrow.png);
+}
+QComboBox[Orange = &quot;true&quot;]::down-arrow {
+		width: 10px;
+		image: url(./Textures/DownArrow_orange.png);
+}
+QComboBox[Blue = &quot;true&quot;]::down-arrow {
+		width: 10px;
+		image: url(./Textures/DownArrow_blue.png);
+}
+QComboBox::down-arrow:on {
+		width: 10px;
+        image: url(./Textures/DownArrow_Disable.png);
+}
+
+QComboBox QAbstractItemView {
+        border: 1px solid rgb(230, 230, 230);
+        background: rgb(250, 250, 250);
+        border-radius: 10px;
+}
+QComboBox QAbstractItemView::item {
+     	height : 15px ;
+}
+QListView{
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		border-bottom: 2px solid rgb(0, 136, 67);
+		border-radius: 0px;
+}
+QListView[Orange = &quot;true&quot;]{
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		border-bottom:  2px solid rgb(230, 108, 38);
+		border-radius: 0px;
+}
+QListView[Blue = &quot;true&quot;]{
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		border-bottom:  2px solid rgb(31, 91, 182);
+		border-radius: 0px;
+}
+
+QListView::item {
+		margin: 1px;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+     	background : white;
+}
+QListView::item:hover {
+     	background :  rgb(0, 106, 37);
+		color: white;
+}
+QListView::item:selected {
+     	background :  rgb(234, 178, 70);
+		font: bold;
+}
+QListView[Orange = &quot;true&quot;]::item:hover {
+     	background :  rgb(204, 88, 21);
+		color: white;
+}
+QListView[Orange = &quot;true&quot;]::item:selected {
+     	background :  rgb(234, 178, 70);
+		font: bold;
+}
+QListView[Blue = &quot;true&quot;]::item:hover {
+     	background : rgb(31, 91, 182);
+		color: white;
+}
+QListView[Blue = &quot;true&quot;]::item:selected {
+     	background :  rgb(234, 178, 70);
+		font: bold;
+}
+/*********提示框Label*********/
+QLabel[Error = &quot;true&quot;]{
+		color: black;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		background: rgb(255, 150, 150);
+		border-radius: 10px;
+}
+QLabel[Warning = &quot;true&quot;]{
+		color: black;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		background: rgb(255, 227, 124);
+		border-radius: 10px;
+}
+QLabel[Note = &quot;true&quot;]{
+		color: black;
+		font-family: &quot;Calibri&quot;;
+		font: 12px;
+		border: 1px solid rgb(200, 200, 200);
+		background: rgb(218, 255, 207);
+		border-radius: 10px;
+}</string>
+  </property>
+  <property name="locale">
+   <locale language="Chinese" country="China"/>
+  </property>
+  <property name="GreyBotton" stdset="0">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Components_Green</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Colored Button(Default)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>122</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Grayscale Button(Alternative)</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>124</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>191</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>CheckBox</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>177</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="text">
+             <string>Check Box uncheck</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_2">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Check Box checked</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable Check</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>20</y>
+          <width>201</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Radio Botton</string>
+        </property>
+        <widget class="QFrame" name="frame">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>181</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>181</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QRadioButton" name="radioButton_3">
+             <property name="text">
+              <string>Radio Button uncheck</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="text">
+              <string>Radio Button checked</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unabled</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_4">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unablecheck</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>20</y>
+          <width>211</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Text Editor</string>
+        </property>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Enable</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>191</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f(x) = 1 - sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;g(x) = (1 + cos(x)) / 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Disable</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>191</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;-1&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;(x) = 1 + sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>241</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Adjusting</string>
+        </property>
+        <widget class="QSpinBox" name="spinBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>170</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>220</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>250</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>70</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>330</y>
+          <width>321</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Combo Box</string>
+        </property>
+        <widget class="QComboBox" name="comboBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>281</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Item 1 by Default</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QListWidget" name="listWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>181</y>
+           <width>281</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Components_Orange</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>241</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Adjusting</string>
+        </property>
+        <widget class="QSpinBox" name="spinBox_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>170</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider_3">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>220</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>250</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider_3">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>70</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>191</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>CheckBox</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>177</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="checkBox_5">
+            <property name="text">
+             <string>Check Box uncheck</string>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Check Box checked</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_7">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_8">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable Check</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_11">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>20</y>
+          <width>201</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Radio Botton</string>
+        </property>
+        <widget class="QFrame" name="frame_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>181</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>181</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QRadioButton" name="radioButton_5">
+             <property name="text">
+              <string>Radio Button uncheck</string>
+             </property>
+             <property name="Orange" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_6">
+             <property name="text">
+              <string>Radio Button checked</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="Orange" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_7">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unabled</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_8">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unablecheck</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Colored Button(Default)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>122</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QPushButton" name="pushButton_13">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_14">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_15">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+            <property name="Orange" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_13">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>20</y>
+          <width>211</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Text Editor</string>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Enable</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>191</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f(x) = 1 - sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;g(x) = (1 + cos(x)) / 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Disable</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>191</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;-1&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;(x) = 1 + sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_14">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>330</y>
+          <width>321</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Combo Box</string>
+        </property>
+        <widget class="QComboBox" name="comboBox_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>281</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Item 1 by Default</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QListWidget" name="listWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>181</y>
+           <width>281</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Grayscale Button(Alternative)</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>124</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Componets_Blue</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_15">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>20</y>
+          <width>201</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Radio Botton</string>
+        </property>
+        <widget class="QFrame" name="frame_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>181</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>181</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QRadioButton" name="radioButton_9">
+             <property name="text">
+              <string>Radio Button uncheck</string>
+             </property>
+             <property name="Blue" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_10">
+             <property name="text">
+              <string>Radio Button checked</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="Blue" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_11">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unabled</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_12">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Radio Button unablecheck</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_16">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Grayscale Button(Alternative)</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_10">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>124</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QPushButton" name="pushButton_17">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_18">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_19">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_20">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+            <property name="Gray" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_17">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>20</y>
+          <width>211</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Text Editor</string>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Enable</string>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>191</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f(x) = 1 - sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;g(x) = (1 + cos(x)) / 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>191</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Line Edit Disable</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>191</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Calibri'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;f&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;-1&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;(x) = 1 + sin(x&lt;/span&gt;&lt;span style=&quot; font-size:12px; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="Orange" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_18">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>330</y>
+          <width>321</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Combo Box</string>
+        </property>
+        <widget class="QComboBox" name="comboBox_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>281</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Item 1 by Default</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QListWidget" name="listWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>181</y>
+           <width>281</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_19">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>191</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>CheckBox</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>177</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QCheckBox" name="checkBox_9">
+            <property name="text">
+             <string>Check Box uncheck</string>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_10">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Check Box checked</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_11">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_12">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>CheckBox Disable Check</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>241</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Adjusting</string>
+        </property>
+        <widget class="QSpinBox" name="spinBox_5">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_5">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>170</y>
+           <width>141</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider_5">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>220</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSlider" name="horizontalSlider_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>250</y>
+           <width>161</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>30</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider_5">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="Blue" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSlider" name="verticalSlider_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>30</y>
+           <width>22</width>
+           <height>251</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>70</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>-1</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Colored Button(Default)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_12">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>122</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QPushButton" name="pushButton_21">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Push Button</string>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_22">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hovering</string>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_23">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_24">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Disable</string>
+            </property>
+            <property name="Blue" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>Alerts, Warnings and Errors</string>
+       </attribute>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>1161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>              Error: Please recheck your color combination, there are too many colors in a same page!!</string>
+        </property>
+        <property name="Error" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>20</y>
+          <width>30</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(./Textures/Error.png);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>1161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>              Warning: Please recheck your font configurations, 宋体 or 黑体 is not suitable for GUI!!</string>
+        </property>
+        <property name="Error" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="Warning" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_6">
+        <property name="geometry">
+         <rect>
+          <x>17</x>
+          <y>70</y>
+          <width>30</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(./Textures/Warning.png);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>1161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>              Note: Avoid applying three or more colors simultaneously, they confuse the user.  Try to use complementary colors for decorating, like orange to green or blue.</string>
+        </property>
+        <property name="Error" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="Warning" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="Note" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_7">
+        <property name="geometry">
+         <rect>
+          <x>17</x>
+          <y>121</y>
+          <width>30</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(./Textures/Note.png);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>About</string>
+       </attribute>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>170</y>
+          <width>501</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(./Textures/Ris.png);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 127);</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
