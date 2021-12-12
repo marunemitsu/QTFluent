@@ -1,5 +1,5 @@
 # QT Fluent
-A Windows11 and Office style fluent QT GUI Template. QT fluent implements three color components and a series of interactive behaviors (such as click and hover) through QSS. However, shadows and other special effects cannot be added at present due to the limitation of QSS. Here are some screenshots:
+A Windows11 and Office style fluent QT GUI Template. QT fluent implements three color components with a series of interactons (such as click and hover) through QSS. However, shadows and other effects are not presented due to the limitation of QSS. Here are some screenshots:
 
 ![Green Comps](https://user-images.githubusercontent.com/33621926/145712351-de64ad41-e70c-496d-ae6c-e29c7c912d80.png)
 ![Orange Comps](https://user-images.githubusercontent.com/33621926/145712366-a6c0117e-ae09-49c7-9e0c-78f99721da2c.png)
@@ -8,4 +8,4 @@ A Windows11 and Office style fluent QT GUI Template. QT fluent implements three 
 ![About](https://user-images.githubusercontent.com/33621926/145712549-3e95fa11-c7da-451a-ba2d-720a88317a28.png)
 
 ## Acknowledgment
-The Icons are downloaded from https://www.iconfont.cn/.
+The icons are downloaded from https://www.iconfont.cn/. Please observe the rules from www.iconfont.cn if you want to use this template.
